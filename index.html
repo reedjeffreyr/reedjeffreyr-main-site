@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fixed Mark Digital - Web design and consulting that puts you in control. I build it. I teach it. You own it.">
+    <title>Fixed Mark Digital - Jeff Reed | Web Developer & Consultant</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <img src="images/jr-logo-main.svg" alt="Fixed Mark Digital Logo">
+                    <span class="logo-text">Fixed Mark Digital</span>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#projects" class="nav-link">Projects</a>
+                    <a href="#contact" class="btn btn-primary">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile" id="mobileNav">
+                <a href="#about" class="nav-link-mobile">About</a>
+                <a href="#services" class="nav-link-mobile">Services</a>
+                <a href="#projects" class="nav-link-mobile">Projects</a>
+                <a href="#contact" class="nav-link-mobile btn btn-primary">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero">
+            <div class="container">
+                <div class="hero-grid">
+                    <!-- Left Column - Text Content -->
+                    <div class="hero-content">
+                        <div class="badge">
+                            Available for Projects & Consulting
+                        </div>
+                        
+                        <h1 class="hero-title">
+                            Hi, I'm <span class="text-primary">Jeff Reed</span>
+                        </h1>
+                        
+                        <h2 class="hero-subtitle">
+                            I Build It. I Teach It. You Own It.
+                        </h2>
+                        
+                        <p class="hero-description">
+                            Web design and consulting that puts you in control of your own online presence. 
+                            I don't just build websites — I make sure you know how to use yours.
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="#contact" class="btn btn-primary">
+                                Get in Touch
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#projects" class="btn btn-secondary">
+                                View Projects
+                            </a>
+                        </div>
+
+                        <!-- Social Links -->
+                        <div class="social-links">
+                            <a href="#" class="social-link" aria-label="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="social-link" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:contact@reedjeffreyr.com" class="social-link" aria-label="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column - Image -->
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image">
+                            <img src="images/fampic.jpg" alt="Jeff Reed - Web Developer">
+                        </div>
+                        <!-- Decorative Elements -->
+                        <div class="decorative-circle-1"></div>
+                        <div class="decorative-circle-2"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2>About Fixed Mark Digital</h2>
+                    <div class="section-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-content">
+                        <p>
+                            At Fixed Mark Digital, I do things a little differently. Yes, I build and 
+                            polish websites — but my real focus is making sure you actually know how 
+                            to use yours.
+                        </p>
+                        <p>
+                            Too many business owners feel locked out of their own site, waiting days 
+                            and paying fees for simple changes that shouldn't require a developer at all. 
+                            I'm here to change that — through hands-on training, consult calls, custom 
+                            video walkthroughs, and step-by-step documentation built around your specific site.
+                        </p>
+                        <p class="highlight">
+                            My goal is simple: the less you need me for the small stuff, the better 
+                            I've done my job.
+                        </p>
+                    </div>
+
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">50+</div>
+                            <div class="stat-label">Projects Completed</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">30+</div>
+                            <div class="stat-label">Happy Clients</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">100%</div>
+                            <div class="stat-label">Satisfaction</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Highlights -->
+                <div class="highlights-grid">
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>Build & Polish</h3>
+                        <p>Professional websites designed and developed to your specifications</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3>Teach & Empower</h3>
+                        <p>Hands-on training so you can manage your own site with confidence</p>
+                    </div>
+                    <div class="highlight-card">
+                        <div class="highlight-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Support & Guide</h3>
+                        <p>Custom documentation and video walkthroughs for your specific needs</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="container">
+                <div class="section-header">
+                    <h2>What I Offer</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-description">
+                        More than just web development — I give you the knowledge and tools to 
+                        take control of your digital presence.
+                    </p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Website Development</h3>
+                        <p>Custom websites built with modern technologies, designed to grow with your business.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3>Hands-On Training</h3>
+                        <p>Learn to update content, add pages, and manage your site without waiting on a developer.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Accessibility Assessments & Remediation</h3>
+                        <p>Comprehensive accessibility audits and fixes to ensure your site is usable by everyone, meeting WCAG standards.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <h3>E-Commerce Solutions</h3>
+                        <p>Online stores you can actually manage yourself, with full training on products and orders.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3>Custom Video Walkthroughs</h3>
+                        <p>Screen recordings tailored to your specific site, so you can see exactly how to make changes.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-wrench"></i>
+                        </div>
+                        <h3>Ongoing Consulting</h3>
+                        <p>Support when you need it, without being dependent on me for every little update.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h3>Custom Documentation</h3>
+                        <p>Step-by-step guides built around your website, not generic tutorials.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Featured Projects</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-description">
+                        Here are some of my recent projects. Each one represents a unique challenge 
+                        and showcases different aspects of my skills.
+                    </p>
+                </div>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Project Name 1">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Project Name 1</h3>
+                            <p>A brief description of this project and the technologies used. Highlight the key features and outcomes.</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">Tailwind CSS</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="#" class="project-link secondary">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&q=80" alt="Project Name 2">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Project Name 2</h3>
+                            <p>Another amazing project showcasing your skills. Describe what problem it solved and its impact.</p>
+                            <div class="project-tags">
+                                <span class="tag">Next.js</span>
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="#" class="project-link secondary">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="Project Name 3">
+                            <div class="project-overlay"></div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Project Name 3</h3>
+                            <p>Your third featured project. Focus on what makes this project unique and valuable.</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Material-UI</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                                <a href="#" class="project-link secondary">
+                                    <i class="fab fa-github"></i>
+                                    <span>Code</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coming Soon Card -->
+                <div class="coming-soon-card">
+                    <div class="coming-soon-icon">🚀</div>
+                    <h3>More Projects Coming Soon</h3>
+                    <p>
+                        I'm constantly working on new and exciting projects. Check back soon 
+                        to see what I've been building!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Get in Touch</h2>
+                    <div class="section-underline"></div>
+                    <p class="section-description">
+                        Have a project in mind? Let's work together to bring your ideas to life. 
+                        I'm always excited to hear about new opportunities.
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Form -->
+                    <div class="contact-form-wrapper">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" required placeholder="John Doe">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" required placeholder="john@example.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Your Message</label>
+                                <textarea id="message" name="message" required rows="5" placeholder="Tell me about your project..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">
+                                Send Message
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="contact-info">
+                        <div>
+                            <h3>Let's Connect</h3>
+                            <p>
+                                Ready to take control of your website? Let's talk about how I can help you 
+                                build a site you actually understand and can manage yourself.
+                            </p>
+                        </div>
+
+                        <div class="contact-details">
+                            <div class="contact-detail">
+                                <div class="contact-detail-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <h4>Email Me</h4>
+                                    <a href="mailto:contact@reedjeffreyr.com">contact@reedjeffreyr.com</a>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail">
+                                <div class="contact-detail-icon">
+                                    <i class="fas fa-comment"></i>
+                                </div>
+                                <div>
+                                    <h4>Response Time</h4>
+                                    <p>I typically respond within 24 hours</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Additional Info -->
+                        <div class="availability-card">
+                            <h4>Available for:</h4>
+                            <ul>
+                                <li>• New website builds with training</li>
+                                <li>• Accessibility assessments & remediation</li>
+                                <li>• Consult calls & site reviews</li>
+                                <li>• Custom video tutorials</li>
+                                <li>• Ongoing support packages</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand -->
+                <div class="footer-brand">
+                    <div class="logo">
+                        <img src="images/jr-logo-main.svg" alt="Fixed Mark Digital Logo">
+                        <span class="logo-text">Fixed Mark Digital</span>
+                    </div>
+                    <p>
+                        I build it. I teach it. You own it. Web design and consulting that 
+                        puts you in control.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social & Contact -->
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="footer-social-links">
+                        <a href="#" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:contact@reedjeffreyr.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                    <p>contact@reedjeffreyr.com</p>
+                </div>
+            </div>
+
+            <!-- Bottom Bar -->
+            <div class="footer-bottom">
+                <p>
+                    © <span id="currentYear"></span> Fixed Mark Digital. Made with 
+                    <i class="fas fa-heart"></i> by Jeff Reed
+                </p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
