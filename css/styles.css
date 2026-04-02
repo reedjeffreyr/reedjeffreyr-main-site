@@ -184,6 +184,7 @@ button {
 .logo img {
     height: 40px;
     width: auto;
+    display: block;
 }
 
 .logo-text {
@@ -943,6 +944,7 @@ section {
 
 .footer-brand .logo img {
     filter: brightness(0) invert(1);
+    display: block;
 }
 
 .footer-brand p {
