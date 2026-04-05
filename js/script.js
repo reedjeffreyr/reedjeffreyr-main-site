@@ -1,5 +1,5 @@
 // ===================================
-// Fixed Mark Digital - JavaScript
+// Fixed Mark Digital - JavaScript v1.0
 // ===================================
 
 // Wait for DOM to be fully loaded
@@ -80,50 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             header.style.boxShadow = 'none';
         }
     });
-    
-    // ===================================
-    // Contact Form Handling
-    // ===================================
-    // const contactForm = document.getElementById('contactForm');
-    
-    // if (contactForm) {
-    //     contactForm.addEventListener('submit', function(e) {
-    //         e.preventDefault();
-            
-    //         // Get form values
-    //         const formData = {
-    //             name: document.getElementById('name').value,
-    //             email: document.getElementById('email').value,
-    //             message: document.getElementById('message').value
-    //         };
-            
-    //         // Log form data (in production, this would send to a server)
-    //         console.log('Form submitted:', formData);
-            
-    //         // Show success message
-    //         alert('Thank you for your message! I\'ll get back to you soon.');
-            
-    //         // Reset form
-    //         contactForm.reset();
-            
-    //         // TODO: In production, replace this with actual form submission
-    //         // Example: Send to a backend API, use Formspree, Netlify Forms, etc.
-    //         // fetch('/api/contact', {
-    //         //     method: 'POST',
-    //         //     headers: { 'Content-Type': 'application/json' },
-    //         //     body: JSON.stringify(formData)
-    //         // })
-    //         // .then(response => response.json())
-    //         // .then(data => {
-    //         //     alert('Message sent successfully!');
-    //         //     contactForm.reset();
-    //         // })
-    //         // .catch(error => {
-    //         //     alert('Error sending message. Please try again.');
-    //         // });
-    //     });
-    // }
-    
+
     // ===================================
     // Current Year in Footer
     // ===================================
@@ -200,11 +157,26 @@ document.addEventListener('DOMContentLoaded', function() {
             this.style.borderColor = 'var(--color-primary)';
         });
     });
+
+    // ===================================
+    // Handle "Thank You" Message from Make.com Redirect
+    // ===================================
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('sent') === 'true') {
+        const thankYouMessage = document.getElementById('thankYouMessage');
+        if (thankYouMessage) {
+            thankYouMessage.style.display = 'block';
+            
+            // Clean up the URL in the address bar without refreshing (UX Polish)
+            setTimeout(() => {
+                window.history.replaceState({}, document.title, window.location.pathname + "#contact");
+            }, 3000);
+        }
+    }
     
     // ===================================
     // Console Welcome Message
     // ===================================
     console.log('%cFixed Mark Digital', 'color: #0174DE; font-size: 24px; font-weight: bold;');
     console.log('%cI Build It. I Teach It. You Own It.', 'color: #34424a; font-size: 14px;');
-    console.log('%cInterested in working together? Contact me at contact@reedjeffreyr.com', 'color: #717182; font-size: 12px;');
 });
