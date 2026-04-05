@@ -84,45 +84,45 @@ document.addEventListener('DOMContentLoaded', function() {
     // ===================================
     // Contact Form Handling
     // ===================================
-    const contactForm = document.getElementById('contactForm');
+    // const contactForm = document.getElementById('contactForm');
     
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
+    // if (contactForm) {
+    //     contactForm.addEventListener('submit', function(e) {
+    //         e.preventDefault();
             
-            // Get form values
-            const formData = {
-                name: document.getElementById('name').value,
-                email: document.getElementById('email').value,
-                message: document.getElementById('message').value
-            };
+    //         // Get form values
+    //         const formData = {
+    //             name: document.getElementById('name').value,
+    //             email: document.getElementById('email').value,
+    //             message: document.getElementById('message').value
+    //         };
             
-            // Log form data (in production, this would send to a server)
-            console.log('Form submitted:', formData);
+    //         // Log form data (in production, this would send to a server)
+    //         console.log('Form submitted:', formData);
             
-            // Show success message
-            alert('Thank you for your message! I\'ll get back to you soon.');
+    //         // Show success message
+    //         alert('Thank you for your message! I\'ll get back to you soon.');
             
-            // Reset form
-            contactForm.reset();
+    //         // Reset form
+    //         contactForm.reset();
             
-            // TODO: In production, replace this with actual form submission
-            // Example: Send to a backend API, use Formspree, Netlify Forms, etc.
-            // fetch('/api/contact', {
-            //     method: 'POST',
-            //     headers: { 'Content-Type': 'application/json' },
-            //     body: JSON.stringify(formData)
-            // })
-            // .then(response => response.json())
-            // .then(data => {
-            //     alert('Message sent successfully!');
-            //     contactForm.reset();
-            // })
-            // .catch(error => {
-            //     alert('Error sending message. Please try again.');
-            // });
-        });
-    }
+    //         // TODO: In production, replace this with actual form submission
+    //         // Example: Send to a backend API, use Formspree, Netlify Forms, etc.
+    //         // fetch('/api/contact', {
+    //         //     method: 'POST',
+    //         //     headers: { 'Content-Type': 'application/json' },
+    //         //     body: JSON.stringify(formData)
+    //         // })
+    //         // .then(response => response.json())
+    //         // .then(data => {
+    //         //     alert('Message sent successfully!');
+    //         //     contactForm.reset();
+    //         // })
+    //         // .catch(error => {
+    //         //     alert('Error sending message. Please try again.');
+    //         // });
+    //     });
+    // }
     
     // ===================================
     // Current Year in Footer
