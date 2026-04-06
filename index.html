@@ -14,348 +14,290 @@
     <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
-    <!-- Custom Styles -->
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Styles (Bootstrap Overrides) -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
-    <!-- Header -->
-    <header id="header">
+<body class="bg-white" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="100">
+
+    <!-- Skip to Main Content Link -->
+    <a href="#main-content" class="visually-hidden-focusable p-3 bg-primary text-white position-absolute top-0 start-0" style="z-index: 1050;">Skip to main content</a>
+
+    <!-- Header / Navbar -->
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-light bg-white bg-opacity-75 backdrop-blur fixed-top border-bottom py-3" style="backdrop-filter: blur(10px);">
         <div class="container">
-            <div class="header-content">
-                <!-- Logo -->
-                <div class="logo">
-                    <img src="images/jr-logo-main.svg" alt="Jeffrey Reed Logo">
-                    <!-- <span class="logo-text">Jeffrey Reed Logo</span> -->
-                </div>
-
-                <!-- Desktop Navigation -->
-                <nav class="nav-desktop">
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#services" class="nav-link">Services</a>
-                    <a href="#projects" class="nav-link" style="display:none;">Projects</a>
-                    <a href="#contact" class="btn btn-primary">Contact</a>
-                </nav>
-
-                <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-                    <i class="fas fa-bars"></i>
-                </button>
+            <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+                <img src="images/jr-logo-main.svg" alt="Jeffrey Reed Logo" height="40">
+            </a>
+            
+            <button class="navbar-toggler border-0 px-2 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars custom-menu-icon fs-4 text-dark" aria-hidden="true"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="mobileNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-4 mt-3 mt-lg-0">
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#about" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</a></li>
+                    <li class="nav-item"><a class="nav-link text-dark fw-medium" href="#services" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Services</a></li>
+                    <li class="nav-item d-none"><a class="nav-link text-dark fw-medium" href="#projects" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Projects</a></li>
+                    <li class="nav-item mt-2 mt-lg-0"><a class="btn btn-primary px-4 fw-medium" href="#contact" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Contact</a></li>
+                </ul>
             </div>
-
-            <!-- Mobile Navigation -->
-            <nav class="nav-mobile" id="mobileNav">
-                <a href="#about" class="nav-link-mobile">About</a>
-                <a href="#services" class="nav-link-mobile">Services</a>
-                <a href="#projects" class="nav-link-mobile" style="display:none;">Projects</a>
-                <a href="#contact" class="nav-link-mobile btn btn-primary">Contact</a>
-            </nav>
         </div>
-    </header>
+    </nav>
 
-    <main>
+    <main id="main-content">
         <!-- Hero Section -->
-        <section id="hero">
+        <section id="hero" class="min-vh-100 d-flex align-items-center pt-5 mt-5 pb-5">
             <div class="container">
-                <div class="hero-grid">
+                <div class="row align-items-center g-5">
                     <!-- Left Column - Text Content -->
-                    <div class="hero-content">
-                        <div class="badge">
+                    <div class="col-lg-6 order-2 order-lg-1">
+                        <!-- ACCESSIBILITY FIX: Added text-primary-accessible class -->
+                        <span class="badge bg-primary bg-opacity-10 text-primary-accessible rounded-pill px-3 py-2 mb-4 fs-6 fw-medium">
                             Available for Projects & Consulting
-                        </div>
+                        </span>
                         
-                        <h1 class="hero-title">
+                        <h1 class="display-4 mb-3">
                             Hi, I'm <span class="text-primary">Jeff Reed</span>
                         </h1>
                         
-                        <h2 class="hero-subtitle">
+                        <h2 class="h3 fw-semibold text-secondary mb-4" style="color: #34424a !important;">
                             I Build It. I Teach It. You Own It.
                         </h2>
                         
-                        <p class="hero-description">
+                        <p class="lead text-muted mb-4 fs-5">
                             Web design and consulting that puts you in control of your own online presence. 
                             I don't just build websites — I make sure you know how to use yours.
                         </p>
 
-                        <div class="hero-buttons">
-                            <a href="#contact" class="btn btn-primary">
-                                Get in Touch
-                                <i class="fas fa-arrow-right"></i>
+                        <div class="d-flex flex-wrap gap-3 mb-4">
+                            <a href="#contact" class="btn btn-primary btn-lg px-4 d-flex align-items-center gap-2 fs-6">
+                                Get in Touch <i class="fas fa-arrow-right" aria-hidden="true"></i>
                             </a>
-                            <a href="#projects" class="btn btn-secondary" style="display:none;">
+                            <a href="#projects" class="btn btn-outline-dark btn-lg px-4 fs-6 d-none">
                                 View Projects
                             </a>
                         </div>
 
                         <!-- Social Links -->
-                        <div class="social-links">
-                            <a href="#" class="social-link" aria-label="GitHub" style="display:none;">
-                                <i class="fab fa-github"></i>
+                        <div class="d-flex gap-3 pt-2">
+                            <a href="#" class="btn btn-outline-secondary rounded-circle d-none align-items-center justify-content-center" style="width: 48px; height: 48px;" aria-label="GitHub">
+                                <i class="fab fa-github fs-5" aria-hidden="true"></i>
                             </a>
-                            <a href="#" class="social-link" aria-label="LinkedIn">
-                                <i class="fab fa-linkedin"></i>
+                            <a href="#" class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;" aria-label="LinkedIn">
+                                <i class="fab fa-linkedin fs-5" aria-hidden="true"></i>
                             </a>
-                            <a href="mailto:contact@reedjeffreyr.com" class="social-link" aria-label="Email">
-                                <i class="fas fa-envelope"></i>
+                            <a href="mailto:contact@reedjeffreyr.com" class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center" style="width: 48px; height: 48px;" aria-label="Email">
+                                <i class="fas fa-envelope fs-5" aria-hidden="true"></i>
                             </a>
                         </div>
                     </div>
 
                     <!-- Right Column - Image -->
-                    <div class="hero-image-wrapper">
-                        <div class="hero-image">
-                            <img src="images/jeffrey-reed.jpg" alt="Jeff Reed - Web Developer">
+                    <div class="col-lg-6 order-1 order-lg-2 position-relative">
+                        <div class="ratio ratio-1x1 rounded-5 overflow-hidden bg-light shadow-sm" style="border-radius: 1.5rem !important; z-index: 2;">
+                            <img src="images/jeffrey-reed.jpg" alt="Jeff Reed - Web Developer" class="object-fit-cover w-100 h-100">
                         </div>
                         <!-- Decorative Elements -->
-                        <div class="decorative-circle-1"></div>
-                        <div class="decorative-circle-2"></div>
+                        <div class="position-absolute top-0 end-0 translate-middle bg-primary bg-opacity-25 rounded-circle" style="width: 6rem; height: 6rem; z-index: 1;"></div>
+                        <div class="position-absolute bottom-0 start-0 translate-middle rounded-circle" style="width: 8rem; height: 8rem; background-color: rgba(52, 66, 74, 0.1); z-index: 1;"></div>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section id="about">
-            <div class="container">
-                <div class="section-header">
-                    <h2>About Jeff</h2>
-                    <div class="section-underline"></div>
+        <section id="about" class="py-5 bg-light bg-opacity-50">
+            <div class="container py-lg-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5">About Jeff</h2>
+                    <hr class="border-primary border-3 opacity-100 mx-auto mt-3 mb-4" style="width: 80px;">
                 </div>
 
-                <div class="about-grid">
-                    <div class="about-content">
-                        <p>
+                <div class="row align-items-center g-5 mb-5 pb-4">
+                    <div class="col-lg-6">
+                        <p class="fs-5 mb-4">
                             I do things a little differently. Yes, I build and 
                             polish websites — but my real focus is making sure you actually know how 
                             to use yours.
                         </p>
-                        <p>
+                        <p class="fs-5 mb-4">
                             Too many business owners feel locked out of their own site, waiting days 
                             and paying fees for simple changes that shouldn't require a developer at all. 
                             I'm here to change that — through hands-on training, consult calls, custom 
                             video walkthroughs, and step-by-step documentation built around your specific site.
                         </p>
-                        <p class="highlight">
+                        <p class="fs-5 fw-medium text-dark">
                             My goal is simple: the less you need me for the small stuff, the better 
                             I've done my job.
                         </p>
                     </div>
 
-                    <div class="stats-grid">
-                        <div class="stat-card">
-                            <div class="stat-number">8+</div>
-                            <div class="stat-label">Years Experience</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">90+ Score</div>
-                            <div class="stat-label">Average Accessibility</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">Expert</div>
-                            <div class="stat-label">Shopify & Ecommerce</div>
-                        </div>
-                        <div class="stat-card">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Satisfaction</div>
+                    <div class="col-lg-6">
+                        <div class="row g-3 text-center">
+                            <div class="col-6">
+                                <div class="card h-100 border-0 shadow-sm py-4">
+                                    <div class="card-body">
+                                        <div class="display-5 fw-bold text-primary mb-2">8+</div>
+                                        <div class="text-muted">Years Experience</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card h-100 border-0 shadow-sm py-4">
+                                    <div class="card-body">
+                                        <div class="display-5 fw-bold text-primary mb-2">90+</div>
+                                        <div class="text-muted">Accessibility Score</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card h-100 border-0 shadow-sm py-4">
+                                    <div class="card-body">
+                                        <div class="h3 fw-bold text-primary mb-2 pt-2">Expert</div>
+                                        <div class="text-muted">Shopify & Ecommerce</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="card h-100 border-0 shadow-sm py-4">
+                                    <div class="card-body">
+                                        <div class="display-5 fw-bold text-primary mb-2">100%</div>
+                                        <div class="text-muted">Satisfaction</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Highlights -->
-                <div class="highlights-grid">
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i class="fas fa-code"></i>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 hover-shadow-lg" tabindex="0">
+                            <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center mb-4 text-primary" style="width: 56px; height: 56px;">
+                                <i class="fas fa-code fs-4" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Build & Polish</h3>
+                            <p class="text-muted mb-0">Professional websites designed and developed to your specifications</p>
                         </div>
-                        <h3>Build & Polish</h3>
-                        <p>Professional websites designed and developed to your specifications</p>
                     </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i class="fas fa-palette"></i>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 hover-shadow-lg" tabindex="0">
+                            <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center mb-4 text-primary" style="width: 56px; height: 56px;">
+                                <i class="fas fa-palette fs-4" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Teach & Empower</h3>
+                            <p class="text-muted mb-0">Hands-on training so you can manage your own site with confidence</p>
                         </div>
-                        <h3>Teach & Empower</h3>
-                        <p>Hands-on training so you can manage your own site with confidence</p>
                     </div>
-                    <div class="highlight-card">
-                        <div class="highlight-icon">
-                            <i class="fas fa-bolt"></i>
+                    <div class="col-md-4">
+                        <div class="card h-100 border-0 shadow-sm p-4 hover-shadow-lg" tabindex="0">
+                            <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center mb-4 text-primary" style="width: 56px; height: 56px;">
+                                <i class="fas fa-bolt fs-4" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Support & Guide</h3>
+                            <p class="text-muted mb-0">Custom documentation and video walkthroughs for your specific needs</p>
                         </div>
-                        <h3>Support & Guide</h3>
-                        <p>Custom documentation and video walkthroughs for your specific needs</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Services Section -->
-        <section id="services">
-            <div class="container">
-                <div class="section-header">
-                    <h2>What I Offer</h2>
-                    <div class="section-underline"></div>
-                    <p class="section-description">
+        <section id="services" class="py-5">
+            <div class="container py-lg-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5">What I Offer</h2>
+                    <hr class="border-primary border-3 opacity-100 mx-auto mt-3 mb-4" style="width: 80px;">
+                    <p class="lead text-muted max-w-700 mx-auto" style="max-width: 700px;">
                         More than just web development — I give you the knowledge and tools to 
                         take control of your digital presence.
                     </p>
                 </div>
 
-                <div class="services-grid">
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-globe"></i>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+                    <div class="col">
+                        <div class="card h-100 p-4 border rounded-4 hover-shadow-lg" tabindex="0">
+                            <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center mb-4 text-primary hover-icon-scale" style="width: 64px; height: 64px;">
+                                <i class="fas fa-globe fs-3" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Website Development</h3>
+                            <p class="text-muted mb-0">Custom websites built with modern technologies, designed to grow with your business.</p>
                         </div>
-                        <h3>Website Development</h3>
-                        <p>Custom websites built with modern technologies, designed to grow with your business.</p>
                     </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-mobile-alt"></i>
+                    <div class="col">
+                        <div class="card h-100 p-4 border rounded-4 hover-shadow-lg" tabindex="0">
+                            <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center mb-4 text-primary hover-icon-scale" style="width: 64px; height: 64px;">
+                                <i class="fas fa-mobile-alt fs-3" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Hands-On Training</h3>
+                            <p class="text-muted mb-0">Learn to update content, add pages, and manage your site without waiting on a developer.</p>
                         </div>
-                        <h3>Hands-On Training</h3>
-                        <p>Learn to update content, add pages, and manage your site without waiting on a developer.</p>
                     </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-eye"></i>
+                    <div class="col">
+                        <div class="card h-100 p-4 border rounded-4 hover-shadow-lg" tabindex="0">
+                            <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center mb-4 text-primary hover-icon-scale" style="width: 64px; height: 64px;">
+                                <i class="fas fa-eye fs-3" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Accessibility Assessments</h3>
+                            <p class="text-muted mb-0">Comprehensive accessibility audits and fixes to ensure your site is usable by everyone, meeting WCAG standards.</p>
                         </div>
-                        <h3>Accessibility Assessments & Remediation</h3>
-                        <p>Comprehensive accessibility audits and fixes to ensure your site is usable by everyone, meeting WCAG standards.</p>
                     </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-shopping-cart"></i>
+                    <div class="col">
+                        <div class="card h-100 p-4 border rounded-4 hover-shadow-lg" tabindex="0">
+                            <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center mb-4 text-primary hover-icon-scale" style="width: 64px; height: 64px;">
+                                <i class="fas fa-shopping-cart fs-3" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="h4 mb-3">E-Commerce Solutions</h3>
+                            <p class="text-muted mb-0">Online stores you can actually manage yourself, with full training on products and orders.</p>
                         </div>
-                        <h3>E-Commerce Solutions</h3>
-                        <p>Online stores you can actually manage yourself, with full training on products and orders.</p>
                     </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-database"></i>
+                    <div class="col">
+                        <div class="card h-100 p-4 border rounded-4 hover-shadow-lg" tabindex="0">
+                            <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center mb-4 text-primary hover-icon-scale" style="width: 64px; height: 64px;">
+                                <i class="fas fa-database fs-3" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Video Walkthroughs</h3>
+                            <p class="text-muted mb-0">Screen recordings tailored to your specific site, so you can see exactly how to make changes.</p>
                         </div>
-                        <h3>Custom Video Walkthroughs</h3>
-                        <p>Screen recordings tailored to your specific site, so you can see exactly how to make changes.</p>
                     </div>
-
-                    <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-wrench"></i>
+                    <div class="col">
+                        <div class="card h-100 p-4 border rounded-4 hover-shadow-lg" tabindex="0">
+                            <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center mb-4 text-primary hover-icon-scale" style="width: 64px; height: 64px;">
+                                <i class="fas fa-wrench fs-3" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="h4 mb-3">Ongoing Consulting</h3>
+                            <p class="text-muted mb-0">Support when you need it, without being dependent on me for every little update.</p>
                         </div>
-                        <h3>Ongoing Consulting</h3>
-                        <p>Support when you need it, without being dependent on me for every little update.</p>
-                    </div>
-
-                    <div class="service-card" style="display: none;">
-                        <div class="service-icon">
-                            <i class="fas fa-search"></i>
-                        </div>
-                        <h3>Custom Documentation</h3>
-                        <p>Step-by-step guides built around your website, not generic tutorials.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section id="projects" style="display: none;">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Featured Projects</h2>
-                    <div class="section-underline"></div>
-                    <p class="section-description">
+        <section id="projects" class="py-5 bg-light bg-opacity-50 d-none">
+            <div class="container py-lg-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5">Featured Projects</h2>
+                    <hr class="border-primary border-3 opacity-100 mx-auto mt-3 mb-4" style="width: 80px;">
+                    <p class="lead text-muted max-w-700 mx-auto" style="max-width: 700px;">
                         Here are some of my recent projects. Each one represents a unique challenge 
                         and showcases different aspects of my skills.
                     </p>
                 </div>
 
-                <div class="projects-grid">
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Project Name 1">
-                            <div class="project-overlay"></div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Project Name 1</h3>
-                            <p>A brief description of this project and the technologies used. Highlight the key features and outcomes.</p>
-                            <div class="project-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">TypeScript</span>
-                                <span class="tag">Tailwind CSS</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Demo</span>
-                                </a>
-                                <a href="#" class="project-link secondary">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=800&q=80" alt="Project Name 2">
-                            <div class="project-overlay"></div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Project Name 2</h3>
-                            <p>Another amazing project showcasing your skills. Describe what problem it solved and its impact.</p>
-                            <div class="project-tags">
-                                <span class="tag">Next.js</span>
-                                <span class="tag">Node.js</span>
-                                <span class="tag">MongoDB</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Demo</span>
-                                </a>
-                                <a href="#" class="project-link secondary">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card">
-                        <div class="project-image">
-                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&q=80" alt="Project Name 3">
-                            <div class="project-overlay"></div>
-                        </div>
-                        <div class="project-content">
-                            <h3>Project Name 3</h3>
-                            <p>Your third featured project. Focus on what makes this project unique and valuable.</p>
-                            <div class="project-tags">
-                                <span class="tag">React</span>
-                                <span class="tag">Firebase</span>
-                                <span class="tag">Material-UI</span>
-                            </div>
-                            <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    <span>Live Demo</span>
-                                </a>
-                                <a href="#" class="project-link secondary">
-                                    <i class="fab fa-github"></i>
-                                    <span>Code</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mb-5">
+                    <!-- Project Cards (hidden via parent section d-none) -->
                 </div>
 
                 <!-- Coming Soon Card -->
-                <div class="coming-soon-card">
-                    <div class="coming-soon-icon">🚀</div>
-                    <h3>More Projects Coming Soon</h3>
-                    <p>
+                <div class="card border-2 border-dashed border-secondary border-opacity-25 bg-white text-center p-5 rounded-4 mx-auto" style="max-width: 800px;">
+                    <div class="bg-light rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4 fs-1" style="width: 80px; height: 80px;" aria-hidden="true">🚀</div>
+                    <h3 class="h4 mb-3">More Projects Coming Soon</h3>
+                    <p class="text-muted mb-0">
                         I'm constantly working on new and exciting projects. Check back soon 
                         to see what I've been building!
                     </p>
@@ -364,82 +306,79 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contact">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Get in Touch</h2>
-                    <div class="section-underline"></div>
-                    <p class="section-description">
+        <section id="contact" class="py-5">
+            <div class="container py-lg-5">
+                <div class="text-center mb-5">
+                    <h2 class="display-5">Get in Touch</h2>
+                    <hr class="border-primary border-3 opacity-100 mx-auto mt-3 mb-4" style="width: 80px;">
+                    <p class="lead text-muted max-w-700 mx-auto" style="max-width: 700px;">
                         Have a project in mind? Let's work together to bring your ideas to life. 
                         I'm always excited to hear about new opportunities.
                     </p>
                 </div>
 
-                <div class="contact-grid">
+                <div class="row g-5 align-items-start">
                     <!-- Contact Form -->
-                    <div class="contact-form-wrapper">
-                        <div id="thankYouMessage" style="display:none; background: #d4edda; color: #155724; padding: 15px; border-radius: 8px; margin-bottom: 20px; border: 1px solid #c3e6cb; text-align: center;">
-                            <i class="fas fa-check-circle"></i> <strong>Message Sent!</strong> Thanks for reaching out, I'll get back to you soon.
+                    <div class="col-lg-6">
+                        <div class="bg-light bg-opacity-50 p-4 p-md-5 rounded-5 border">
+                            <div id="thankYouMessage" class="alert alert-success d-none mb-4 text-center">
+                                <i class="fas fa-check-circle me-2" aria-hidden="true"></i> <strong>Message Sent!</strong> Thanks for reaching out, I'll get back to you soon.
+                            </div>
+                            <form id="contactForm" action="https://hook.us2.make.com/pkhyumo69b7bkk3xxfe18nr245d1gtc6" method="POST">
+                                <div class="mb-4">
+                                    <label for="name" class="form-label fw-medium text-dark">Your Name</label>
+                                    <input type="text" class="form-control form-control-lg fs-6" id="name" name="name" required placeholder="John Doe">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label fw-medium text-dark">Email Address</label>
+                                    <input type="email" class="form-control form-control-lg fs-6" id="email" name="email" required placeholder="john@example.com">
+                                </div>
+                                <div class="mb-4">
+                                    <label for="message" class="form-label fw-medium text-dark">Your Message</label>
+                                    <textarea class="form-control form-control-lg fs-6" id="message" name="message" required rows="5" placeholder="Tell me about your project..."></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-lg w-100 d-flex align-items-center justify-content-center gap-2">
+                                    Send Message <i class="fas fa-paper-plane" aria-hidden="true"></i>
+                                </button>
+                            </form>
                         </div>
-                        <form id="contactForm" class="contact-form" action="https://hook.us2.make.com/pkhyumo69b7bkk3xxfe18nr245d1gtc6" method="POST">
-                            <div class="form-group">
-                                <label for="name">Your Name</label>
-                                <input type="text" id="name" name="name" required placeholder="John Doe">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="email">Email Address</label>
-                                <input type="email" id="email" name="email" required placeholder="john@example.com">
-                            </div>
-
-                            <div class="form-group">
-                                <label for="message">Your Message</label>
-                                <textarea id="message" name="message" required rows="5" placeholder="Tell me about your project..."></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-primary btn-full">
-                                Send Message
-                                <i class="fas fa-paper-plane"></i>
-                            </button>
-                        </form>
                     </div>
 
                     <!-- Contact Info -->
-                    <div class="contact-info">
-                        <div>
-                            <h3>Let's Connect</h3>
-                            <p>
+                    <div class="col-lg-6">
+                        <div class="mb-5">
+                            <h3 class="h2 mb-3">Let's Connect</h3>
+                            <p class="fs-5 text-muted">
                                 Ready to take control of your website? Let's talk about how I can help you 
                                 build a site you actually understand and can manage yourself.
                             </p>
                         </div>
 
-                        <div class="contact-details">
-                            <div class="contact-detail">
-                                <div class="contact-detail-icon">
-                                    <i class="fas fa-envelope"></i>
+                        <div class="d-flex flex-column gap-4 mb-5">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center text-primary flex-shrink-0" style="width: 48px; height: 48px;">
+                                    <i class="fas fa-envelope fs-5" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <h4>Email Me</h4>
-                                    <a href="mailto:contact@reedjeffreyr.com">contact@reedjeffreyr.com</a>
+                                    <h4 class="h5 mb-1 text-dark">Email Me</h4>
+                                    <a href="mailto:contact@reedjeffreyr.com" class="text-primary text-decoration-none">contact@reedjeffreyr.com</a>
                                 </div>
                             </div>
 
-                            <div class="contact-detail">
-                                <div class="contact-detail-icon">
-                                    <i class="fas fa-comment"></i>
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="bg-primary bg-opacity-10 rounded-3 d-flex align-items-center justify-content-center text-primary flex-shrink-0" style="width: 48px; height: 48px;">
+                                    <i class="fas fa-comment fs-5" aria-hidden="true"></i>
                                 </div>
                                 <div>
-                                    <h4>Response Time</h4>
-                                    <p>I typically respond within 24 hours</p>
+                                    <h4 class="h5 mb-1 text-dark">Response Time</h4>
+                                    <p class="text-muted mb-0">I typically respond within 24 hours</p>
                                 </div>
                             </div>
                         </div>
 
-                        <!-- Additional Info -->
-                        <div class="availability-card">
-                            <h4>Available for:</h4>
-                            <ul>
+                        <div class="bg-primary bg-opacity-10 rounded-4 p-4 border-start border-primary border-4">
+                            <h4 class="h5 mb-3 text-dark">Available for:</h4>
+                            <ul class="list-unstyled text-muted d-flex flex-column gap-2 mb-0">
                                 <li>• New website builds with training</li>
                                 <li>• Accessibility assessments & remediation</li>
                                 <li>• Consult calls & site reviews</li>
@@ -454,64 +393,67 @@
     </main>
 
     <!-- Footer -->
-    <footer id="footer">
-        <div class="container">
-            <div class="footer-grid">
+    <footer id="footer" class="py-5" style="background-color: #34424a; color: #ffffff;">
+        <div class="container py-4">
+            <div class="row g-5 mb-5">
                 <!-- Brand -->
-                <div class="footer-brand">
-                    <div class="logo">
-                        <img src="images/jr-logo-main.svg" alt="Jeffrey Reed Logo">
-                        <span class="logo-text">Jeffrey Reed</span>
+                <div class="col-md-4">
+                    <div class="d-flex align-items-center gap-2 mb-4">
+                        <img src="images/jr-logo-main.svg" alt="Jeffrey Reed Logo" height="32" style="filter: brightness(0) invert(1);">
+                        <span class="fs-4 fw-medium">Jeffrey Reed</span>
                     </div>
-                    <p>
+                    <!-- ACCESSIBILITY FIX: Swapped text-white-50 for text-white text-opacity-75 -->
+                    <p class="text-white text-opacity-75 lh-lg">
                         I build it. I teach it. You own it. Web design and consulting that 
                         puts you in control.
                     </p>
                 </div>
 
                 <!-- Quick Links -->
-                <div class="footer-links">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#projects" style="display:none;">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                <div class="col-md-4">
+                    <h4 class="h5 mb-4 text-white">Quick Links</h4>
+                    <ul class="list-unstyled d-flex flex-column gap-3">
+                        <li><a href="#about" class="text-white text-opacity-75 text-decoration-none border-bottom border-transparent hover-text-white">About</a></li>
+                        <li><a href="#services" class="text-white text-opacity-75 text-decoration-none border-bottom border-transparent hover-text-white">Services</a></li>
+                        <li class="d-none"><a href="#projects" class="text-white text-opacity-75 text-decoration-none border-bottom border-transparent hover-text-white">Projects</a></li>
+                        <li><a href="#contact" class="text-white text-opacity-75 text-decoration-none border-bottom border-transparent hover-text-white">Contact</a></li>
                     </ul>
                 </div>
 
                 <!-- Social & Contact -->
-                <div class="footer-social">
-                    <h4>Connect</h4>
-                    <div class="footer-social-links">
-                        <a href="#" aria-label="GitHub" style="display:none;">
-                            <i class="fab fa-github"></i>
+                <div class="col-md-4">
+                    <h4 class="h5 mb-4 text-white">Connect</h4>
+                    <div class="d-flex gap-3 mb-4">
+                        <a href="#" class="d-none bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0174DE'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'" aria-label="GitHub">
+                            <i class="fab fa-github" aria-hidden="true"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/reedjeffreyr/" aria-label="LinkedIn">
-                            <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/reedjeffreyr/" class="bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0174DE'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin" aria-hidden="true"></i>
                         </a>
-                        <a href="mailto:contact@reedjeffreyr.com" aria-label="Email">
-                            <i class="fas fa-envelope"></i>
+                        <a href="mailto:contact@reedjeffreyr.com" class="bg-white bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center text-white text-decoration-none" style="width: 40px; height: 40px; transition: background-color 0.3s;" onmouseover="this.style.backgroundColor='#0174DE'" onmouseout="this.style.backgroundColor='rgba(255,255,255,0.1)'" aria-label="Email">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
                         </a>
                     </div>
-                    <p>contact@reedjeffreyr.com</p>
+                    <p class="text-white text-opacity-75">contact@reedjeffreyr.com</p>
                 </div>
             </div>
 
             <!-- Bottom Bar -->
-            <div class="footer-bottom" style="display:none;">
-                <p>
+            <div class="d-none d-md-flex flex-column flex-md-row justify-content-between align-items-center pt-4 border-top border-white border-opacity-10">
+                <p class="text-white text-opacity-75 mb-3 mb-md-0 d-flex align-items-center gap-2">
                     © <span id="currentYear"></span> Jeffrey Reed. Made with 
-                    <i class="fas fa-heart"></i> by Jeff Reed
+                    <i class="fas fa-heart text-primary" aria-hidden="true"></i> by Jeff Reed
                 </p>
-                <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+                <div class="d-flex gap-4">
+                    <a href="#" class="text-white text-opacity-75 text-decoration-none">Privacy Policy</a>
+                    <a href="#" class="text-white text-opacity-75 text-decoration-none">Terms of Service</a>
                 </div>
             </div>
         </div>
     </footer>
 
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JavaScript -->
     <script src="js/script.js"></script>
 </body>
