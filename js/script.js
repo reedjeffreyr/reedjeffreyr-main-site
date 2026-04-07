@@ -31,13 +31,46 @@ document.addEventListener('DOMContentLoaded', function() {
 
 // 4. Close mobile menu after clicking a link (Optimized for BS5)
 document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .btn').forEach(link => {
-    link.addEventListener('click', () => {
+    link.addEventListener('click', (e) => {
         const navbarCollapse = document.querySelector('.navbar-collapse');
         
         // Only trigger if the menu is actually open
         if (navbarCollapse && navbarCollapse.classList.contains('show')) {
-            const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
-            bsCollapse.hide();
+            e.preventDefault(); // Prevent immediate navigation
+            
+            // Get the target href
+            const targetId = link.getAttribute('href');
+            
+            // Close the menu first
+            try {
+                const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapse);
+                bsCollapse.hide();
+            } catch (error) {
+                // Fallback: manually remove classes
+                navbarCollapse.classList.remove('show');
+                const navbarToggler = document.querySelector('.navbar-toggler');
+                if (navbarToggler) {
+                    navbarToggler.classList.add('collapsed');
+                    navbarToggler.setAttribute('aria-expanded', 'false');
+                }
+            }
+            
+            // Wait for menu to close, then navigate
+            setTimeout(() => {
+                if (targetId && targetId.startsWith('#')) {
+                    const targetElement = document.getElementById(targetId.substring(1));
+                    if (targetElement) {
+                        const navbar = document.querySelector('.navbar');
+                        const headerHeight = navbar ? navbar.offsetHeight : 80;
+                        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                        
+                        window.scrollTo({
+                            top: targetPosition,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            }, 300); // Wait for collapse animation
         }
     });
 });
