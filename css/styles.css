@@ -18,11 +18,23 @@
 /* ===================================
    Base & Typography
    =================================== */
+html,body{
+    max-width:100%;
+    overflow-x:hidden;
+    position:relative;
+}
+
+main{
+    overflow-x:hidden;
+    width:100%;
+}
+
 body {
     font-family: var(--bs-body-font-family);
     color: var(--color-accent);
     line-height: 1.6;
     overflow-x:hidden;
+
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-brand {
@@ -158,6 +170,7 @@ hr.border-primary {
     box-shadow: 0 0 0 3px rgba(1, 116, 222, 0.1) !important;
     border-color: var(--bs-primary) !important;
 }
+
 
 .badge{
     white-space: normal !important;
