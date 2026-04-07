@@ -28,3 +28,14 @@ document.addEventListener('DOMContentLoaded', function() {
     console.log('%cFixed Mark Digital', 'color: #0174DE; font-size: 24px; font-weight: bold;');
     console.log('%cI Build It. I Teach It. You Own It.', 'color: #34424a; font-size: 14px;');
 });
+
+// Close mobile menu after clicking a link
+document.querySelectorAll('.navbar-nav .nav-link, .navbar-nav .btn').forEach(link => {
+    link.addEventListener('click', () => {
+        const navbarCollapse = document.querySelector('.navbar-collapse');
+        if (navbarCollapse.classList.contains('show')) {
+            const bsCollapse = new bootstrap.Collapse(navbarCollapse);
+            bsCollapse.hide();
+        }
+    });
+});
