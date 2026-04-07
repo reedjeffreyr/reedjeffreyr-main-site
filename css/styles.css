@@ -22,11 +22,14 @@ body {
     font-family: var(--bs-body-font-family);
     color: var(--color-accent);
     line-height: 1.6;
+    overflow-x:hidden;
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-brand {
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
+    word-break: normal; /* Prevent word breaking */
+    overflow-wrap: normal; /* Prevent word breaking */
 }
 
 html {
@@ -154,6 +157,35 @@ hr.border-primary {
 .form-control:focus {
     box-shadow: 0 0 0 3px rgba(1, 116, 222, 0.1) !important;
     border-color: var(--bs-primary) !important;
+}
+
+.badge{
+    white-space: normal !important;
+}
+
+/* ===================================
+   Responsive Typography for Cards
+   =================================== */
+/* Prevent word breaking in cards and adjust font sizes */
+@media (max-width: 576px) {
+    .card-body h3 {
+        font-size: 1.1rem !important; /* Smaller headings on mobile */
+        line-height: 1.3;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+    
+    .card-body p {
+        font-size: 0.9rem !important; /* Smaller text on mobile */
+        line-height: 1.5;
+        word-break: normal;
+        overflow-wrap: normal;
+    }
+    
+    .card-body {
+        word-break: normal;
+        overflow-wrap: normal;
+    }
 }
 
 /* ===================================
